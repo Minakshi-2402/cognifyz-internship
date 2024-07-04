@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div id="contain">
+        <label for="txtNum1">Number1:</label><br>
+        <input type="text" id="txtNum1" value="0"><br><br>
+        <label for="txtNum2">Number2:</label><br>
+        <input type="text" id="txtNum2" value="0"><br><br>
+       <label for="txtsum">Sum:</label><br>
+       <input type="text" id="txtsum" value="0" disabled><br><br>
+       <input type="button" value="Add" id="sum" onclick="add()">
+       <input type="button" value="Reset" id="reset" onclick="reset()">
+    </div>
+       <script type="text/javascript">
+function reset()
+{
+    document.getElementById("txtNum1").value="0";
+    document.getElementById("txtNum2").value="0";
+    document.getElementById("txtsum").value="0";
+}
+function add()
+{
+    var num1= Number(document.getElementById("txtNum1").value); 
+    var num2= Number(document.getElementById("txtNum2").value); 
+    var sum= num1+num2;
+    document.getElementById("txtsum").value = String(sum);
+}
+           </script>
+</body>
+</html>
